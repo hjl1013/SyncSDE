@@ -1,9 +1,7 @@
-import os, pdb
+import os
 from glob import glob
 import argparse
-import numpy as np
 import torch
-import requests
 from PIL import Image
 
 from lavis.models import load_model_and_preprocess
