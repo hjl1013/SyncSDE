@@ -4,9 +4,7 @@ This repository includes official implementation of "SyncSDE: A Probabilistic Fr
 
 ## Installation
 
-```
-pip install -r requirements.txt
-```
+TBD
 
 
 ## Running SyncSDE
