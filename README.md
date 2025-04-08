@@ -52,7 +52,7 @@ python src/wide_image.py --prompt_path "./data/prompt_wide_image.txt" \
 
 ### Ambiguous Image Generation
 
-To use the pretrained [Deeepfloyd-IF](https://github.com/deep-floyd/IF) model, please log in to hugging face by following the [instructions](https://huggingface.co/docs/diffusers/en/api/pipelines/deepfloyd_if).
+To use the pretrained [Deepfloyd-IF](https://github.com/deep-floyd/IF) model, please log in to hugging face by following the [instructions](https://huggingface.co/docs/diffusers/en/api/pipelines/deepfloyd_if).
 
 Then, run the script:
 
