@@ -1,53 +1,54 @@
-# SyncSDE: A Probabilistic Framework for Diffusion Synchronization
+# React + TypeScript + Vite
 
-This repository includes official implementation of "SyncSDE: A Probabilistic Framework for Diffusion Synchronization" (CVPR 2025).
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Installation
+Currently, two official plugins are available:
 
-```
-pip install -r requirements.txt
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Expanding the ESLint configuration
 
-## Running SyncSDE
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-
-### Mask-based Text-to-Image Generation
-
-
-
-### Text-driven Real Image Editing
-
-First invert the real image using DDIM inversion.
-
-```
-python src/inversion.py --input_image "data/image.png" \
-                        --results_folder "output/real_image_editing"
-```
-
-Then edit the real image.
-
-
-```
-python src/real_image_editing.py --inversion "./output/real_image_editing/inversion/image.pt" \
-                                 --prompt "./output/real_image_editing/prompt/image.txt" \
-                                 --results_folder "./output/real_image_editing" \
-                                 --task_name "cat2dog" --inv_lambda 5.0 --use_float_16
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-### Wide Image Generation
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
 ```
-python src/wide_image.py --prompt_path "./data/prompt_wide_image.txt" --random_seed 0 \
-                         --results_folder "output/wide_image" --inv_lambda 5.0 \
-                         --n_patches 13 --init_xt_from_zt --use_float_16
-```
-
-### Ambiguous Image Generation
-
-
-
-## Acknowledgments
-
-
-This repository is constructed based on [Conditional Score Guidance](https://github.com/Hleephilip/CSG) and [DeepFloyd-IF](https://github.com/deep-floyd/IF). The source image for text-driven real image editing is brought from [pix2pix-zero](https://github.com/pix2pixzero/pix2pix-zero/tree/main). 
