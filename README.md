@@ -68,4 +68,4 @@ You may use 5 types of transforms: `'rotate_cw'`, `'rotate_ccw'`, `'rotate_180'`
 ## Acknowledgments
 
 
-This repository is constructed based on [Conditional Score Guidance](https://github.com/Hleephilip/CSG) and [DeepFloyd-IF](https://github.com/deep-floyd/IF). The source image for text-driven real image editing is brought from [pix2pix-zero](https://github.com/pix2pixzero/pix2pix-zero/tree/main). 
+This repository is constructed based on [Conditional Score Guidance](https://github.com/Hleephilip/CSG) and [DeepFloyd-IF](https://github.com/deep-floyd/IF). The source image for text-driven real image editing is brought from [pix2pix-zero](https://github.com/pix2pixzero/pix2pix-zero/tree/main) repository. 
