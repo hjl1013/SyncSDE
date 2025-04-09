@@ -10,21 +10,22 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    margin: 100px 50px;
+    margin: 100px 0;
+    max-width: 1000px;
+    width: 80%;
 }
 
 .project__title > p {
     font-size: 3rem;
     color: #333;
     text-align: center;
-    max-width: 1000px;
 }
 
 .project__authorInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .project__authors {
@@ -33,6 +34,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .project__author {
@@ -42,13 +44,13 @@
     justify-content: center;
 }
 
-.project__author > p {
+.project__authorName {
     font-size: 1.25rem;
     color: hsl(204, 86%, 53%) !important;
     cursor: pointer;
 }
 
-.project__author > p:hover {
+.project__authorName:hover {
     text-decoration: underline;
 }
 
@@ -58,6 +60,22 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project__contributions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project__conference {
+    font-size: 1.25rem;
+    color: #333;
+    text-align: center;
 }
 
 .project__links {
@@ -91,10 +109,10 @@
 
 .project__content {
     max-width: 1000px;
+    width: 80%;
 }
 
 .project__teaser {
-    padding: 0 100px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -125,7 +143,7 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    padding: 100px;
+    padding: 100px 0;
 }
 
 .project__abstractText {
@@ -186,7 +204,7 @@
 .project__editingBody > p {
     font-size: 1rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -205,7 +223,7 @@
 .project__wideBody > p {
     font-size: 1rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -224,7 +242,7 @@
 .project__ambiguousBody > p {
     font-size: 1rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -243,7 +261,7 @@
 .project__meshBody > p {
     font-size: 1rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -262,7 +280,7 @@
 .project__motionBody > p {
     font-size: 1rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -288,7 +306,7 @@
 .project__lambdaTestingBody > p {
     font-size: 1rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -296,7 +314,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     gap: 50px;
 }
 
@@ -305,8 +322,111 @@
     border-radius: 10px;
     font-size: 0.9rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
     overflow-x: auto;
     width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .project__maskBody {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .project__maskBody > img {
+        width: 100%;
+    }
+
+    .project__maskBody > p {
+        text-align: justify;
+    }
+
+    .project__editingBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .project__editingBody > img {
+        width: 100%;
+    }
+
+    .project__editingBody > p {
+        text-align: justify;
+    }
+
+    .project__wideBody {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }   
+
+    .project__wideBody > img {
+        width: 100%;
+    }
+
+    .project__wideBody > p {
+        text-align: justify;
+    }
+
+    .project__ambiguousBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .project__ambiguousBody > img {
+        width: 100%;
+    }
+
+    .project__ambiguousBody > p {
+        text-align: justify;
+    }
+
+    .project__meshBody {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .project__meshBody > img {
+        width: 100%;
+    }
+
+    .project__meshBody > p {
+        text-align: justify;
+    }
+
+    .project__motionBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .project__motionBody > img {
+        width: 100%;
+    }
+
+    .project__motionBody > p {
+        text-align: justify;
+    }
+
+    .project__lambdaTestingBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .project__lambdaTestingBody > p {
+        text-align: justify;
+    }
 }

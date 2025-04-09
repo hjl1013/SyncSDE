@@ -13,21 +13,20 @@ const Project = () => {
                 </div>
                 <div className='project__authorInfo'>
                     <div className='project__authors'>
-                        <div className='project__author'><p className='google-sans-light'><a href='https://hjl1013.github.io/' target='_blank' rel='noopener noreferrer'>Hyunjun Lee</a></p>*</div>
-                        <div className='project__author'><p className='google-sans-light'><a href='https://www.linkedin.com/in/philip21' target='_blank' rel='noopener noreferrer'>Hyunsoo Lee</a></p>*</div>
-                        <div className='project__author'><p className='google-sans-light'><a href='https://jellyheadandrew.github.io/' target='_blank' rel='noopener noreferrer'>Sookwan Han</a></p>&dagger;</div>
+                        <div className='project__author'><p className='project__authorName google-sans-light'><a href='https://hjl1013.github.io/' target='_blank' rel='noopener noreferrer'>Hyunjun Lee</a></p><p className='google-sans-light'><sup>1&#8251;</sup></p></div>
+                        <div className='project__author'><p className='project__authorName google-sans-light'><a href='https://www.linkedin.com/in/philip21' target='_blank' rel='noopener noreferrer'>Hyunsoo Lee</a></p><p className='google-sans-light'><sup>1&#8251;</sup></p></div>
+                        <div className='project__author'><p className='project__authorName google-sans-light'><a href='https://jellyheadandrew.github.io/' target='_blank' rel='noopener noreferrer'>Sookwan Han</a></p><p className='google-sans-light'><sup>1,2&dagger;</sup></p></div>
                     </div>
                     <div className='project__affilations'>
-                        <p className='project__affiliation google-sans-light'>ECE, Seoul National University</p>
-                        <p className='project__affiliation google-sans-light'>Republic of Korea Air Force</p>
-                    </div>
-                    <div className='project__conference'>
-                        <p className='project__conference-name google-sans-light'>CVPR 2025</p>
+                        <p className='project__affiliation google-sans-light'><sup>1</sup>ECE, Seoul National University</p>
+                        <p className='project__affiliation google-sans-light'><sup>2</sup>Republic of Korea Air Force</p>
                     </div>
                     <div className='project__contributions'>
-                        <p className='google-sans-light'>
-                            * indicates equal contribution, &dagger; indicates project lead
-                        </p>
+                        <p className='google-sans-light'>&#8251; indicates equal contribution</p>
+                        <p className='google-sans-light'>&dagger; indicates project lead</p>
+                    </div>
+                    <div className='project__conference'>
+                        <p className='project__conference google-sans-medium'>CVPR 2025</p>
                     </div>
                 </div>
                 <div className='project__links'>
@@ -37,12 +36,16 @@ const Project = () => {
                             <p className='project__linkName google-sans-medium'>Paper</p>
                         </div>
                     </a>
-                    <a href='https://github.com/hjl1013/SyncSDE' target='_blank' rel='noopener noreferrer'>
+                    {/* <a href='https://github.com/hjl1013/SyncSDE' target='_blank' rel='noopener noreferrer'>
                         <div className='project__link'>
                             <GitHubIcon />
-                            <p className='project__linkName google-sans-medium'>Code</p>
+                            <p className='project__linkName google-sans-medium'>Code (Coming Soon)</p>
                         </div>
-                    </a>
+                    </a> */}
+                    <div className='project__link'>
+                        <GitHubIcon />
+                        <p className='project__linkName google-sans-medium'>Code (Coming Soon)</p>
+                    </div>
                 </div>
             </div>
 
@@ -73,7 +76,7 @@ const Project = () => {
                 </div>
                 <div className='project__experiments project__content'>
                     <div className='project__experiment'>
-                        <p className='project__bodyTitle google-sans-medium'>Mask-based Text-to-Image generation</p>
+                        <p className='project__bodyTitle google-sans-medium'>Mask-based Text-to-Image Generation</p>
                         <div className='project__maskBody'>
                             <img src='./figures/CVPR2025_Qualitative_Mask_Generation.png' width='100%' height='100%'/>
                             <p className='google-sans-light'>
@@ -82,7 +85,7 @@ const Project = () => {
                         </div>
                     </div>
                     <div className='project__experiment'>
-                        <p className='project__bodyTitle google-sans-medium'>Text-driven real image editing</p>
+                        <p className='project__bodyTitle google-sans-medium'>Text-driven Real Image Editing</p>
                         <div className='project__editingBody'>
                             <p className='google-sans-light'>
                                 Editing images given a text prompt to modify the content.
@@ -91,7 +94,7 @@ const Project = () => {
                         </div>
                     </div>
                     <div className='project__experiment'>
-                        <p className='project__bodyTitle google-sans-medium'>Wide image generation</p>
+                        <p className='project__bodyTitle google-sans-medium'>Wide Image Generation</p>
                         <div className='project__wideBody'>
                             <img src='./figures/CVPR2025_Qualitative_Wide_Image_Crop.png' width='100%' height='100%'/>
                             <p className='google-sans-light'>
@@ -100,7 +103,7 @@ const Project = () => {
                         </div>
                     </div>
                     <div className='project__experiment'>
-                        <p className='project__bodyTitle google-sans-medium'>Ambiguous image generation</p>
+                        <p className='project__bodyTitle google-sans-medium'>Ambiguous Image Generation</p>
                         <div className='project__ambiguousBody'>
                             <p className='google-sans-light'>
                                 Generating images with optical illusions. It has different interpretations depending on the viewpoint and transformation.
@@ -109,7 +112,7 @@ const Project = () => {
                         </div>
                     </div>
                     <div className='project__experiment'>
-                        <p className='project__bodyTitle google-sans-medium'>3D mesh texturing</p>
+                        <p className='project__bodyTitle google-sans-medium'>3D Mesh Texturing</p>
                         <div className='project__meshBody'>
                             <img src='./figures/CVPR2025_Qualitative_Mesh_Texturing.png' width='100%' height='100%'/>
                             <p className='google-sans-light'>
@@ -118,7 +121,7 @@ const Project = () => {
                         </div>
                     </div>
                     <div className='project__experiment'>
-                        <p className='project__bodyTitle google-sans-medium'>Long-horizon motion generation</p>
+                        <p className='project__bodyTitle google-sans-medium'>Long-horizon Motion Generation</p>
                         <div className='project__motionBody'>
                             <p className='google-sans-light'>
                                 Using motion diffusion models to generate long-horizon motion with multiple motion prompts.
