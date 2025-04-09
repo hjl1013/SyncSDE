@@ -1,4 +1,3 @@
-import React from 'react'
 import './Project.css'
 
 import DescriptionIcon from '@mui/icons-material/Description';
@@ -73,59 +72,70 @@ const Project = () => {
                     </div>
                 </div>
                 <div className='project__experiments project__content'>
-                    <div className='project__mask project__experiment'>
+                    <div className='project__experiment'>
                         <p className='project__bodyTitle google-sans-medium'>Mask-based Text-to-Image generation</p>
                         <div className='project__maskBody'>
                             <img src='./figures/CVPR2025_Qualitative_Mask_Generation.png' width='100%' height='100%'/>
                             <p className='google-sans-light'>
-                                We first show that the mask-based text-to-image generation is a special case of diffusion synchronization.
+                                We first show mask-based text-to-image generation, generating masked region and background given seperate text prompts.
                             </p>
                         </div>
                     </div>
-                    <div className='project__mask project__experiment'>
+                    <div className='project__experiment'>
                         <p className='project__bodyTitle google-sans-medium'>Text-driven real image editing</p>
                         <div className='project__editingBody'>
                             <p className='google-sans-light'>
-                                We first show that the mask-based text-to-image generation is a special case of diffusion synchronization.
+                                Editing images given a text prompt to modify the content.
                             </p>
                             <img src='./figures/CVPR2025_Qualitative_Image_Editing_Crop.png' width='100%' height='100%'/>
                         </div>
                     </div>
-                    <div className='project__mask project__experiment'>
+                    <div className='project__experiment'>
                         <p className='project__bodyTitle google-sans-medium'>Wide image generation</p>
                         <div className='project__wideBody'>
                             <img src='./figures/CVPR2025_Qualitative_Wide_Image_Crop.png' width='100%' height='100%'/>
                             <p className='google-sans-light'>
-                                We first show that the mask-based text-to-image generation is a special case of diffusion synchronization.
+                                Generating images with high resolution that a single diffusion model cannot generate.
                             </p>
                         </div>
                     </div>
-                    <div className='project__mask project__experiment'>
+                    <div className='project__experiment'>
                         <p className='project__bodyTitle google-sans-medium'>Ambiguous image generation</p>
                         <div className='project__ambiguousBody'>
                             <p className='google-sans-light'>
-                                We first show that the mask-based text-to-image generation is a special case of diffusion synchronization.
+                                Generating images with optical illusions. It has different interpretations depending on the viewpoint and transformation.
                             </p>
                             <img src='./figures/CVPR2025_Qualitative_Ambiguous_Images.png' width='100%' height='100%'/>
                         </div>
                     </div>
-                    <div className='project__mask project__experiment'>
+                    <div className='project__experiment'>
                         <p className='project__bodyTitle google-sans-medium'>3D mesh texturing</p>
                         <div className='project__meshBody'>
                             <img src='./figures/CVPR2025_Qualitative_Mesh_Texturing.png' width='100%' height='100%'/>
                             <p className='google-sans-light'>
-                                We first show that the mask-based text-to-image generation is a special case of diffusion synchronization.
+                                Generating the texture of 3D meshes given a text prompt.
                             </p>
                         </div>
                     </div>
-                    <div className='project__mask project__experiment'>
+                    <div className='project__experiment'>
                         <p className='project__bodyTitle google-sans-medium'>Long-horizon motion generation</p>
                         <div className='project__motionBody'>
                             <p className='google-sans-light'>
-                                We first show that the mask-based text-to-image generation is a special case of diffusion synchronization.
+                                Using motion diffusion models to generate long-horizon motion with multiple motion prompts.
                             </p>
                             <img src='./figures/CVPR2025_Qualizative_Motion_Generation.png' width='100%' height='100%'/>
                         </div>
+                    </div>
+                </div>
+
+                <div className='project__lambdaTesting project__content'>
+                    <p className='project__bodyTitle google-sans-medium'>Lambda Testing</p>
+                    <div className='project__lambdaTestingBody'>
+                        <p className='google-sans-light'>
+                            We experiment the effect of lambda, the hyperparameter that controls the collaboration between multiple diffusion trajectories.
+                            As lambda decreases, it shows good collaboration between two trajectories.
+                        </p>
+                        <img src='./figures/CVPR2025_lambda_testing.png' width='100%' height='100%'/>
                     </div>
                 </div>
 

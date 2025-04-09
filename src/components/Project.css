@@ -143,11 +143,11 @@
 }
 
 .project__experiment {
-    padding: 0 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    width: 100%;
 }
 
 .project__maskBody {
@@ -165,7 +165,7 @@
 .project__maskBody > p {
     font-size: 1rem;
     color: #545454;
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -173,7 +173,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 50px;
+    width: 100%;
 }
 
 .project__editingBody > img {
@@ -269,12 +271,32 @@
     text-align: left;
 }
 
+.project__lambdaTesting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.project__lambdaTestingBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.project__lambdaTestingBody > p {
+    font-size: 1rem;
+    color: #545454;
+    text-align: justify;
+    line-height: 1.5;
+}
+
 .project__bibtex {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 0 100px;
     gap: 50px;
 }
 
