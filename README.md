@@ -4,8 +4,15 @@ This repository includes official implementation of "SyncSDE: A Probabilistic Fr
 
 ## Installation
 
-TBD
+This repository is tested with Python 3.9, CUDA 11.8.
 
+    pip install -r requirements.txt
+
+If error occurs on numpy version, please re-install numpy via
+
+    conda install -c conda-forge numpy
+
+and upgrade to version 1.22.4.
 
 ## Running SyncSDE
 
@@ -26,7 +33,8 @@ First invert the real image using DDIM inversion.
 
 ```
 python src/inversion.py --input_image "data/image.png" \
-                        --results_folder "output/real_image_editing"
+                        --results_folder "output/real_image_editing" \
+                        --use_float_16
 ```
 
 Then edit the real image.
@@ -49,6 +57,8 @@ python src/wide_image.py --prompt_path "./data/prompt_wide_image.txt" \
 ```
 
 ### Ambiguous Image Generation
+
+**[NOTE]** You may upgrade `transformer` version to use `fp16` variant of the pretrained DeepFloyd-IF model.
 
 To use the pretrained [Deepfloyd-IF](https://github.com/deep-floyd/IF) model, please log in to hugging face by following the [instructions](https://huggingface.co/docs/diffusers/en/api/pipelines/deepfloyd_if).
 

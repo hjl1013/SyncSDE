@@ -1,11 +1,11 @@
 import torch
-from diffusers.models.attention import CrossAttention
+from diffusers.models.attention import Attention as CrossAttention
 
 class MyCrossAttnProcessor:
     def __call__(self, attn: CrossAttention, hidden_states, encoder_hidden_states=None, attention_mask=None):
         if attn.inject_attn == 0:
-            _, sequence_length, _ = hidden_states.shape
-            attention_mask = attn.prepare_attention_mask(attention_mask, sequence_length)
+            B, sequence_length, _ = hidden_states.shape
+            attention_mask = attn.prepare_attention_mask(attention_mask, sequence_length, batch_size=B)
 
             query = attn.to_q(hidden_states)
 
@@ -48,8 +48,8 @@ class MyCrossAttnProcessor:
 
 class MySelfAttnProcessor:
     def __call__(self, attn: CrossAttention, hidden_states, encoder_hidden_states=None, attention_mask=None):
-        _, sequence_length, _ = hidden_states.shape
-        attention_mask = attn.prepare_attention_mask(attention_mask, sequence_length)
+        B, sequence_length, _ = hidden_states.shape
+        attention_mask = attn.prepare_attention_mask(attention_mask, sequence_length, batch_size=B)
 
         query = attn.to_q(hidden_states)
 
@@ -93,7 +93,7 @@ def prep_unet_modified(unet):
             for name, sub_module in module[1].named_modules():
                 sub_module_name = type(sub_module).__name__
                 # if sub_module_name == "CrossAttention":
-                if sub_module_name == "CrossAttention" and 'attn2' in name:
+                if sub_module_name == "Attention" and 'attn2' in name:
                     sub_module.inject_attn = 0
                     sub_module.set_processor(MyCrossAttnProcessor())
     unet.up_blocks[-1].attentions[-1].transformer_blocks[0].attn1.set_processor(MySelfAttnProcessor())

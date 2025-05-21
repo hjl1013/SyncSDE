@@ -103,7 +103,7 @@ class RealImageEditPipeline(BasePipeline):
                         if 'down' in module[0] or 'up' in module[0] or 'mid' in module[0]:
                             for name, sub_module in module[1].named_modules():
                                 sub_module_name = type(sub_module).__name__
-                                if sub_module_name == "CrossAttention" and 'attn2' in name:
+                                if sub_module_name == "Attention" and 'attn2' in name:
                                     # add the cross attention map to the dictionary
                                     attn_mask = sub_module.attn_probs # size is num_channel,s*s,77
                                     d_ref_t2attn[t.item()][f"{module[0]}.{name}"] = attn_mask.detach().cpu()
@@ -119,7 +119,7 @@ class RealImageEditPipeline(BasePipeline):
                                             attn_mask = attn_mask.permute(0, 2, 3, 1)
                                         _attn_mask = torch.mean(torch.stack([attn_mask[:, :, :, src_token_pos[i]] for i in range(len(src_token_pos))]), dim = 0)
                                         temp_list.append(_attn_mask)
-                                
+                      
                     mask_target_t = torch.cat(temp_list, 0)
                     mask_target_t = mask_target_t.sum(0) / mask_target_t.shape[0]
                     mask_target_t = mask_target_t / mask_target_t.max()

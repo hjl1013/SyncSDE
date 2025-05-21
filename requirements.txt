@@ -1,0 +1,8 @@
+diffusers==0.19.3
+transformers
+salesforce-lavis
+accelerate
+Pillow==9.1.0
+einops
+huggingface_hub==0.25.0
+openai-clip
