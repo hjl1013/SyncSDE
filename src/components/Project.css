@@ -311,6 +311,38 @@
     line-height: 1.5;
 }
 
+.project__revisionReportContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project__revisionReport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.project__revisionReportBody {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.project__revisionReportBody > img {
+    width: 60%;
+}
+
+.project__revisionReportBody > p {
+    font-size: 1rem;
+    color: #545454;
+    text-align: left;
+    line-height: 1.5;
+}
+
 .project__bibtex {
     display: flex;
     flex-direction: column;
@@ -428,6 +460,36 @@
     }
 
     .project__lambdaTestingBody > p {
+        text-align: justify;
+    }
+
+    .project__revisionReportContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project__revisionReport {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 100px 0;
+    }
+    
+    .project__revisionReportBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .project__revisionReportBody > img {
+        width: 100%;
+    }
+    
+    .project__revisionReportBody > p {
         text-align: justify;
     }
 }

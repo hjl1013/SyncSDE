@@ -36,22 +36,22 @@ const Project = () => {
                             <p className='project__linkName google-sans-medium'>Paper</p>
                         </div>
                     </a>
-                    {/* <a href='https://github.com/hjl1013/SyncSDE' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://github.com/hjl1013/SyncSDE' target='_blank' rel='noopener noreferrer'>
                         <div className='project__link'>
                             <GitHubIcon />
-                            <p className='project__linkName google-sans-medium'>Code (Coming Soon)</p>
+                            <p className='project__linkName google-sans-medium'>Code</p>
                         </div>
-                    </a> */}
-                    <div className='project__link'>
+                    </a>
+                    {/* <div className='project__link'>
                         <GitHubIcon />
                         <p className='project__linkName google-sans-medium'>Code (Coming Soon)</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
             <div className='project__body'>
                 <div className='project__teaser project__content'>
-                    <img src='./figures/CVPR2025_Qualitative_Teaser_Crop.jpg' width='100%' height='100%'/>
+                    <img src='./figures/CVPR2025_Qualitative_Teaser_Crop.png' width='100%' height='100%'/>
                     <p className='project__teaserText google-sans-light'>
                         SyncSDE analyzes diffusion synchronization to identify where the correlation strategies should be focused, 
                         enabling coherent and high-quality results across diverse collaborative generation tasks.
@@ -139,6 +139,22 @@ const Project = () => {
                             As lambda decreases, it shows good collaboration between two trajectories.
                         </p>
                         <img src='./figures/CVPR2025_lambda_testing.png' width='100%' height='100%'/>
+                    </div>
+                </div>
+                
+                <div className='project__revisionReportContainer grey-background'>
+                    <div className='project__revisionReport project__content'>
+                        <p className='project__bodyTitle google-sans-medium'>Implementation Revisions and Updates</p>
+                        <div className='project__revisionReportBody'>
+                            <img src='./figures/CVPR2025_Revision_Report.svg' width='100%' height='100%'/>
+                            <p className='google-sans-light'>
+                                We identified some implementation errors for 3D Mesh Texturing and have updated the results in our official camera-ready version of CVPR.<br/><br/>
+
+                                Our intention was to define the background mask as the region already filled by previous views during the autoregressive texture generation process. However, we mistakenly used a static background mask as shown in the figure on the left. <br/><br/>
+
+                                Despite these changes, the overall tendency of the results remains consistent. Detailed explanation related to the revision is provided in our latest arXived paper section A.5.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
