@@ -73,8 +73,8 @@ if __name__== "__main__":
 
     with torch.no_grad():   
         if args.transform == "rotate_cw" or args.transform == "rotate_ccw" or args.transform == "rotate_180":
-            from utils.pipeline_ambiguous_rotation_df import IFPieplineEditStage_1 as RotateIFPieplineEditStage_1
-            from utils.pipeline_ambiguous_rotation_df import IFPieplineEditStage_2 as RotateIFPieplineEditStage_2
+            from syncsde.pipelines.pipeline_ambiguous_rotation_df import IFPieplineEditStage_1 as RotateIFPieplineEditStage_1
+            from syncsde.pipelines.pipeline_ambiguous_rotation_df import IFPieplineEditStage_2 as RotateIFPieplineEditStage_2
             rotate_stage_1 = RotateIFPieplineEditStage_1.from_pretrained(
                 "DeepFloyd/IF-I-M-v1.0", 
                 variant="fp16", 
@@ -138,8 +138,8 @@ if __name__== "__main__":
                 prompt1_image = rotate(prompt2_image, 2)
 
         elif args.transform == "skew":
-            from utils.pipeline_ambiguous_skew_df import IFPieplineEditStage_1 as SkewIFPieplineEditStage_1
-            from utils.pipeline_ambiguous_skew_df import IFPieplineEditStage_2 as SkewIFPieplineEditStage_2
+            from syncsde.pipelines.pipeline_ambiguous_skew_df import IFPieplineEditStage_1 as SkewIFPieplineEditStage_1
+            from syncsde.pipelines.pipeline_ambiguous_skew_df import IFPieplineEditStage_2 as SkewIFPieplineEditStage_2
             skew_stage_1 = SkewIFPieplineEditStage_1.from_pretrained(
                 "DeepFloyd/IF-I-M-v1.0", 
                 variant="fp16", 
@@ -194,8 +194,8 @@ if __name__== "__main__":
 
 
         elif args.transform == "flip":
-            from utils.pipeline_ambiguous_ver_flip_df import IFPieplineEditStage_1 as FlipIFPieplineEditStage_1
-            from utils.pipeline_ambiguous_ver_flip_df import IFPieplineEditStage_2 as FlipIFPieplineEditStage_2
+            from syncsde.pipelines.pipeline_ambiguous_ver_flip_df import IFPieplineEditStage_1 as FlipIFPieplineEditStage_1
+            from syncsde.pipelines.pipeline_ambiguous_ver_flip_df import IFPieplineEditStage_2 as FlipIFPieplineEditStage_2
             flip_stage_1 = FlipIFPieplineEditStage_1.from_pretrained(
                 "DeepFloyd/IF-I-M-v1.0", 
                 variant="fp16", 

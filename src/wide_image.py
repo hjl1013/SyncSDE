@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import warnings
 from diffusers import DDIMScheduler
-from utils.pipeline_wide_image import WideImagePipeline
+from syncsde.pipelines.pipeline_wide_image import WideImagePipeline
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.simplefilter(action='ignore', category=UserWarning)

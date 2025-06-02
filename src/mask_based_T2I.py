@@ -5,7 +5,7 @@ import torch
 import warnings
 from PIL import Image
 from diffusers import DDIMScheduler
-from utils.pipeline_mask_T2I import MaskT2IPipeline
+from syncsde.pipelines.pipeline_mask_T2I import MaskT2IPipeline
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.simplefilter(action='ignore', category=UserWarning)

@@ -6,8 +6,8 @@ import clip
 import warnings
 
 from diffusers import DDIMScheduler
-from utils.pipeline_image_edit import RealImageEditPipeline
-from utils.target_prompt import make_target_prompt
+from syncsde.pipelines.pipeline_image_edit import RealImageEditPipeline
+from syncsde.utils.target_prompt import make_target_prompt
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.simplefilter(action='ignore', category=UserWarning)

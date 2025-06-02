@@ -7,6 +7,11 @@ This repository includes official implementation of "SyncSDE: A Probabilistic Fr
 This repository is tested with Python 3.9, CUDA 11.8.
 
     pip install -r requirements.txt
+    pip install -e .
+
+For 3d Mesh Texturing, install pytorch3d
+
+    pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py39_cu118_pyt200/download.html
 
 If error occurs on numpy version, please re-install numpy via
 
@@ -72,6 +77,15 @@ python src/ambiguous_image.py --prompt_path "data/prompt_ambiguous.txt" \
 ```
 
 You may use 5 types of transforms: `'rotate_cw'`, `'rotate_ccw'`, `'rotate_180'`, `'skew'`, and `'flip'`.
+
+### Mesh Texturing
+
+```
+python src/mesh_texturing.py --prompt_path "./data/prompt_mesh_texturing.txt" \
+                             --mesh_path "./data/clutch_bag.obj" \
+                             --results_folder "./output/mesh_texturing" \
+                             --random_seed 0 --inv_lambda 5.0
+```
 
 ## Acknowledgments
 
