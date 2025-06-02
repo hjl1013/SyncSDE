@@ -162,7 +162,7 @@ const Project = () => {
                     <p className='project__bodyTitle google-sans-medium'>BibTeX</p>
                     <pre className='google-sans-light grey-background'>
                         <code>
-                            {`@article{lee2025syncsde,\n\ttitle={SyncSDE: A Probabilistic Framework for Diffusion Synchronization},\n\tauthor={Lee, Hyunjun and Lee, Hyunsoo and Han, Sookwan},\n\tbooktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n\tyear={2025}\n}`}
+                            {`@article{lee2025syncsde,\n\ttitle={SyncSDE: A Probabilistic Framework for Diffusion Synchronization},\n\tauthor={Lee, Hyunjun and Lee, Hyunsoo and Han, Sookwan},\n\tjournal={arXiv preprint arXiv:2503.21555},\n\tyear={2025}\n}`}
                         </code>
                     </pre>
                 </div>
