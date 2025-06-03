@@ -11,7 +11,8 @@ This repository is tested with Python 3.9, CUDA 11.8.
 
 For 3d Mesh Texturing, install pytorch3d
 
-    pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py39_cu118_pyt200/download.html
+    conda install -c conda-forge cupy
+    pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py39_cu118_pyt270/download.html
 
 If error occurs on numpy version, please re-install numpy via
 

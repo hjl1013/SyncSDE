@@ -1,3 +1,4 @@
+numpy==1.22.4
 diffusers==0.19.3
 transformers
 salesforce-lavis
@@ -6,7 +7,9 @@ Pillow==9.1.0
 einops
 huggingface_hub==0.25.0
 openai-clip
-numpy==1.22.4
+torch==2.0.0
+torchvision==0.15.1
 xatlas
 fvcore
 iopath
+natsort

@@ -2,7 +2,7 @@ import sys
 import torch
 from typing import Any, Dict, List, Optional, Union
 sys.path.insert(0, "src/utils")
-from base_pipeline import BasePipeline
+from syncsde.pipelines.base_pipeline import BasePipeline
 
 if torch.cuda.is_available():
     device = "cuda"
