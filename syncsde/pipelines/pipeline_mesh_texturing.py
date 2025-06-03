@@ -28,7 +28,7 @@ color_constants = {"black": [-1, -1, -1], "white": [1, 1, 1], "maroon": [0, -1, 
 color_names = list(color_constants.keys())
 
 
-class MeshTextureModel(BaseModel):
+class MeshTexturePipeline(BaseModel):
     def __init__(self, config):
         self.config = config
         self.device = torch.device(f"cuda:{self.config.gpu}")
