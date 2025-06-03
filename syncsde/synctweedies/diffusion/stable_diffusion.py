@@ -6,8 +6,8 @@ from diffusers.image_processor import VaeImageProcessor
 from diffusers.pipelines.stable_diffusion.safety_checker import StableDiffusionSafetyChecker
 from transformers import CLIPImageProcessor, CLIPTextModel, CLIPTokenizer
 
-from synctweedies.diffusion.diffusion_base import DiffusionModel
-from synctweedies.utils.mesh_utils import replace_attention_processors, SamplewiseAttnProcessor2_0
+from syncsde.synctweedies.diffusion.diffusion_base import DiffusionModel
+from syncsde.synctweedies.utils.mesh_utils import replace_attention_processors, SamplewiseAttnProcessor2_0
 
 
 class SyncTweediesSD(DiffusionModel, StableDiffusionPipeline):

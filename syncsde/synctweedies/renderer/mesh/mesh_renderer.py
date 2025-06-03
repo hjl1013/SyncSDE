@@ -14,9 +14,9 @@ from pytorch3d.renderer import (
     TexturesUV
 )
 
-from synctweedies.renderer.mesh.geometry import HardGeometryShader
-from synctweedies.renderer.mesh.shader import HardNChannelFlatShader
-from synctweedies.renderer.mesh.voronoi import voronoi_solve
+from syncsde.synctweedies.renderer.mesh.geometry import HardGeometryShader
+from syncsde.synctweedies.renderer.mesh.shader import HardNChannelFlatShader
+from syncsde.synctweedies.renderer.mesh.voronoi import voronoi_solve
 
 
 class UVProjection():
