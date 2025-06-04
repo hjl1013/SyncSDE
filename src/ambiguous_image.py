@@ -44,7 +44,7 @@ def flip(image):
 
 if __name__== "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--prompt_path', type=str, required=True) # default='/home/hyunjun/projects/CVPR2025/quant_new/prompts/ambiguous_images_prompts.yml', type=str)
+    parser.add_argument('--prompt_path', type=str, required=True)
     parser.add_argument('--transform', type=str, required=True, choices=['rotate_cw', 'rotate_ccw', 'rotate_180', 'skew', 'flip'])
     parser.add_argument('--results_folder', type=str, default='output/ambiguous_image')
     parser.add_argument('--num_ddim_steps', type=int, default=30)
